@@ -41,7 +41,7 @@ jobs:
         hugo-version: '0.69.0'
 
     - name: Build Content with Hugo
-      run: hugo -t hugo-theme-techdoc --minify -d deploy/public_html 
+      run: hugo -t lekh --minify -d deploy/public_html 
 
     # Setup gcloud CLI
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
