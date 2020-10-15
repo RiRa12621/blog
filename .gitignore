@@ -1,15 +1,33 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+**/.DS_Store
+**/desktop.ini
+_site/**
+CNAME
+.travis.yml
+.idea/
+.vscode/
 
-# Test binary, built with `go test -c`
-*.test
+# Vim ignore
+# source: https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+kubernetes.github.io.iml
+
+nohup.out
+
+# Hugo output
+public/
+resources/
+deploy/public_html/
+
