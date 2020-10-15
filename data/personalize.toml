@@ -1,12 +1,12 @@
 Name = "Rick Rackow"
 
 # Supports markdown
-#About = ""
+About = ""
 
-#Email = ""
+Email = ""
 
 # Add the filename with file extension.
-#Resume = ""
+Resume = ""
 
 # Sets the number of posts to display on the front page
 PostLimit = 4
