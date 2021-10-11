@@ -9,7 +9,7 @@ Name = "Rick Rackow"
 # Supports markdown
 About = "SRE and stuff for @redhat | formerly @eBay | in love with monitoring | typical 'no-life' | dad | he/him"
 
-Email = "rick+blog@rackow.io"
+Email = ""
 
 # Add the filename with file extension.
 Resume = ""
