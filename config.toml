@@ -1,3 +1,32 @@
 baseURL = "https://blog.rackow.io/"
 languageCode = "en-us"
 title = "blog.rackow.io"
+theme = "lekh"
+
+[params]
+Name = "Rick Rackow"
+
+# Supports markdown
+About = "SRE and stuff for @redhat | formerly @eBay | in love with monitoring | typical 'no-life' | dad | he/him"
+
+Email = "rick+blog@rackow.io"
+
+# Add the filename with file extension.
+Resume = ""
+
+# Sets the number of posts to display on the front page
+PostLimit = 4
+
+GoatCounterCode = ""
+
+[[params.profiles]]
+name = "GitHub"
+url = "https://github.com/RiRa12621"
+
+[[params.profiles]]
+name = "Twitter"
+url = "https://twitter.com/rira12621"
+
+[[params.profiles]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/rira12621/"
