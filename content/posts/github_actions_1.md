@@ -264,7 +264,7 @@ on:
 This is the beginning of our file. `name:` defines the name that will be shown
 under the "actions" tab on GitHub.
 
-![GitHub Actions Tab](../imgs/screenshot_actionstab.png)
+![GitHub Actions Tab](/imgs/screenshot_actionstab.png)
 
 The next bit is defining when the action should run. In our case, we would like
 to run on every push to the master branch. Note that if you do not define the
