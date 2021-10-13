@@ -4,7 +4,6 @@ date: 2021-10-11T15:54:18+02:00
 draft: false
 ---
 
-# Deploying With GitHub Actions - Part 1
 
 As the title is hinting, this is part one of a series of entries to follow. This
 first post will deal with a topic that I personally have to touch on a lot:
