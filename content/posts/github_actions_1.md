@@ -12,7 +12,8 @@ precisely that way. In this article, we're going to walk through a couple of
 simple steps to get a hugo based blog (or anything more or less) deployed to
 Google Cloud Run using GitHub Actions.
 
-## Prerequisites You don't need a lot, except a GitHub repository and a Google
+## Prerequisites
+You don't need a lot, except a GitHub repository and a Google
 
 Cloud Platform account. If you don't have one, you can create an account for
 free and get 300$ free credit, which will serve you for a pretty decent amount
