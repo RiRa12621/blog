@@ -4,10 +4,10 @@ title = "blog.rackow.io"
 theme = "lekh"
 
 [params]
-Name = "Rick's Blog"
+Name = "Rick Rolled"
 
 # Supports markdown
-About = "All things SRE| in love with monitoring | dad | he/him"
+About = "Rick Rackow: All things SRE| in love with monitoring | dad | he/him"
 
 Email = ""
 
