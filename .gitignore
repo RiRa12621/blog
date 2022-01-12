@@ -6,6 +6,7 @@ CNAME
 .idea/
 .vscode/
 
+
 # Vim ignore
 # source: https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
 
@@ -30,4 +31,4 @@ nohup.out
 public/
 resources/
 deploy/public_html/
-
+.hugo_build.lock
