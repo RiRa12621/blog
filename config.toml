@@ -1,32 +1,42 @@
-baseURL = "https://blog.rackow.io/"
-languageCode = "en-us"
-title = "blog.rackow.io"
-theme = "lekh"
+baseURL = "https://yelling.cloud/"
+DefaultContentLanguage = "en"
+title = "The Yelling Cloud"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+googleAnalytics = "G-4Q6YZVG9E7"
 
-[params]
-Name = "Rick Rolled"
+[Params]
+  homeTitle = "The Yelling Cloud" # Set a different text for the header on the home page
+  subtitle = "made by Rick Rackow: All things SRE| in love with monitoring | dad | he/him"
+  mainSections = ["post","posts"]
+  #logo = "img/avatar-icon.png" # Expecting square dimensions
+  #favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
 
-# Supports markdown
-About = "Rick Rackow: All things SRE| in love with monitoring | dad | he/him"
 
-Email = ""
+[Author]
+  name = "Rick Rackow"
+  email = "info@yelling.cloud"
+  github = "RiRa12621"
+  gitlab = "RiRa12621"
+  twitter = "RiRa12621"
+  linkedin = "rira12621"
+  stackoverflow = "users/6336357/rick-rackow"
+  #youtube = "user/username" # or channel/channelname
 
-# Add the filename with file extension.
-Resume = ""
-
-# Sets the number of posts to display on the front page
-PostLimit = 4
-
-GoatCounterCode = ""
-
-[[params.profiles]]
-name = "GitHub"
-url = "https://github.com/RiRa12621"
-
-[[params.profiles]]
-name = "Twitter"
-url = "https://twitter.com/rira12621"
-
-[[params.profiles]]
-name = "LinkedIn"
-url = "https://www.linkedin.com/in/rira12621/"
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
