@@ -1,7 +1,8 @@
 ---
 title: "Deploying A Blog With GitHub Actions - Part 1"
-date: 2021-10-11T15:54:18+02:00
-draft: false
+author: "Rick Rackow"
+date: 2021-10-11
+tags: ["Cloud", "CI/CD", "GitHub"]
 ---
 
 

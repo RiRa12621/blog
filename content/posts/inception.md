@@ -1,7 +1,7 @@
 ---
 title: "Inception"
-date: 2021-10-11T17:24:58+02:00
-draft: false
+author: "Rick Rackow"
+date: 2021-10-11
 ---
 
 _"Inception: the beginning of an organization or official activity"_ -
