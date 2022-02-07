@@ -285,6 +285,8 @@ $ sudo mv Util/oc/oc /usr/local/bin/oc
 This is basically just a sad story for M1 users: as per a [maintainer comment](https://github.com/code-ready/crc/issues/2047#issuecomment-827253324)
 CodeReady Containers(CRC) are not available yet and with a bit of 
 interpretation also won't be any time soon.
+A [dev preview](https://github.com/code-ready/crc/discussions/2988) seems to 
+be available.
 
 With Minishift considered deprecated and CRC not working on M1, Apple 
 Silicon users are left out and have no really other option than to run an 
