@@ -275,7 +275,11 @@ $ ./oc version
 
 YAY! We now have a working `oc` binary as well. If you want, you can add it 
 to your path, so it's available more easily, than referencing the directory 
-you built in.
+you built in. You can do that with a oneliner:
+
+```bash
+$ sudo mv Util/oc/oc /usr/local/bin/oc
+```
 
 ## Local Clusters and Final Thoughts
 This is basically just a sad story for M1 users: as per a [maintainer comment](https://github.com/code-ready/crc/issues/2047#issuecomment-827253324)
