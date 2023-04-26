@@ -44,7 +44,7 @@ jobs:
       run: hugo --minify -d deploy/public_html 
 
     # Setup gcloud CLI
-    - uses: google-github-actions/setup-gcloud@master
+    - uses: google-github-actions/setup-gcloud@main
       with:
         version: '286.0.0'
         service_account_email: ${{ secrets.RUN_SA_EMAIL }}
