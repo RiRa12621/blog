@@ -30,5 +30,5 @@ nohup.out
 # Hugo output
 public/
 resources/
-deploy/public_html/
+deploy/
 .hugo_build.lock
