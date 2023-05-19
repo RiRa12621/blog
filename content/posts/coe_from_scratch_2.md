@@ -1,7 +1,7 @@
 ---
 title: "Writing a Container Platform - Part 2"
 author: "Rick Rackow"
-date: 2023-05-19
+date: 2023-05-19T16:35:50+01:00
 subtitle: "APIs and containers"
 image: ""
 draft: false
