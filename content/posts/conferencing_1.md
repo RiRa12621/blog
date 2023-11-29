@@ -233,7 +233,7 @@ The issue with most ticket providers is that they pay you **after** the event.
 Somewhere between a couple of days and two weeks is pretty average. That means
 I'd basically have to cover the total cost out of pocket and I don't know about you,
 but I currently don't have 190k in the bank not knowing what to do with them. So, I
-needed an alternative to the usual suspects like Eventbrite and landed at [Ticket Tailor](tickettaillor.com).
+needed an alternative to the usual suspects like Eventbrite and landed at [Ticket Tailor](https://get.tickettailor.com/innkcx948lv2).
 The whole sign up process is pretty easy: you create what they call a "box office" and then your "box office"
 sells tickets to different events. In this case, one event, SkySummit. They rely on Stripe
 for the actual payments, so no money ever touches their bank account. Everything goes right
