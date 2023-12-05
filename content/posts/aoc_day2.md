@@ -9,6 +9,8 @@ tags: ["Advent of Code","AoC","golang"]
 
 Day 2, another day, another challenge.
 
+### Part 1
+
 Here's the challenge:
 
 ```shell
@@ -411,3 +413,84 @@ func sumGameIds(games []Game) int {
 And that's it!
 
 Code on [GitHub](https://github.com/RiRa12621/advent_of_code23/blob/main/day2/challenge1/main.go)
+
+
+### Part 2
+
+First the challenge:
+
+```shell
+--- Part Two ---
+The Elf says they've stopped producing snow because they aren't getting any water! He isn't sure why the water stopped; however, he can show you how to get to the water source to check it out for yourself. It's just up ahead!
+
+As you continue your walk, the Elf poses a second question: in each game you played, what is the fewest number of cubes of each color that could have been in the bag to make the game possible?
+
+Again consider the example games from earlier:
+
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+In game 1, the game could have been played with as few as 4 red, 2 green, and 6 blue cubes. If any color had even one fewer cube, the game would have been impossible.
+Game 2 could have been played with a minimum of 1 red, 3 green, and 4 blue cubes.
+Game 3 must have been played with at least 20 red, 13 green, and 6 blue cubes.
+Game 4 required at least 14 red, 3 green, and 15 blue cubes.
+Game 5 needed no fewer than 6 red, 3 green, and 2 blue cubes in the bag.
+The power of a set of cubes is equal to the numbers of red, green, and blue cubes multiplied together. The power of the minimum set of cubes in game 1 is 48. In games 2-5 it was 12, 1560, 630, and 36, respectively. Adding up these five powers produces the sum 2286.
+
+For each game, find the minimum set of cubes that must have been present. What is the sum of the power of these sets?
+
+```
+
+Okay, we should have a relatively easy time adjusting. In our struct, instead of
+summing the counts we just capture the highest count for each color:
+
+```golang
+			switch colorValue[2] {
+			case "red":
+				if count >= game.Red {
+					game.Red = count
+				}
+
+			case "blue":
+				if count >= game.Blue {
+
+					game.Blue = count
+				}
+
+			case "green":
+				if count >= game.Green {
+
+					game.Green = count
+				}
+
+```
+
+
+We could optimize for memory and also time because we don't need the validation
+anymore, but I optimize for **my** time, and so I'll keep the rest.
+
+After this change we have the minimum number of cubes per round, and now we multiply
+them for each game and then get a sum of that:
+
+```golang
+func multiSum(games []Game) int {
+	var result int
+	for _, game := range games {
+		result += game.Red * game.Blue * game.Green
+	}
+	return result
+}
+```
+
+
+Now a small addition to the main, so we get a result:
+
+```golang
+log.Infof("The solution for part 2 is: %v", multiSum(games))
+```
+
+Done.
+
+Code on [GitHub](https://github.com/RiRa12621/advent_of_code23/blob/main/day2/challenge2/main.go)
