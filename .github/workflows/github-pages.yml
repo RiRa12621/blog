@@ -37,7 +37,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.102.3'
+          hugo-version: '0.163.3'
       - name: Build Content with Hugo
         run: hugo -d deploy/
       - name: Upload artifact
