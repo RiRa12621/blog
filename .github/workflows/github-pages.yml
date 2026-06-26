@@ -41,7 +41,7 @@ jobs:
       - name: Build Content with Hugo
         run: hugo -d deploy/
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v5
         with:
           # Upload deploy folder
           path: 'deploy/'
