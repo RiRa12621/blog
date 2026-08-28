@@ -1,7 +1,7 @@
 ---
 title: "Apple Containers"
 author: "Rick Rackow"
-date: 2024-08-28T20:00:50+02:00
+date: 2026-08-28T20:00:50+02:00
 subtitle: "A real docker replacement?"
 image: ""
 tags: ["apple", "docker", "container", "chrome"]
