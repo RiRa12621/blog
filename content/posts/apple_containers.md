@@ -4,7 +4,7 @@ author: "Rick Rackow"
 date: 2026-08-28T20:00:50+02:00
 subtitle: "A real docker replacement?"
 image: ""
-tags: ["apple", "docker", "container", "chrome"]
+tags: ["apple", "docker", "container", "apple containers"]
 ---
 
 Apple Containers seems to be all the hype right now. (besides all things AI)
