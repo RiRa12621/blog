@@ -1,0 +1,4 @@
+{{- if not ($.Param "disableCanonical") -}}
+  {{- $metadata := partial "seo/metadata.html" . -}}
+<link rel="canonical" href="{{ $metadata.url }}">
+{{- end -}}

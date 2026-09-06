@@ -1,0 +1,60 @@
+{{- /* Keep search, social, and article metadata consistent without editing posts. */ -}}
+{{- $title := .Title | default .Site.Title -}}
+{{- $description := .Description -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Params.homeTitle | default .Site.Title -}}
+  {{- $description = $description | default .Site.Params.description -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $title = printf "Browse all %s" .Data.Plural -}}
+  {{- $description = $description | default (printf "Browse all %s on %s." .Data.Plural .Site.Title) -}}
+{{- else if eq .Kind "term" -}}
+  {{- $description = $description | default (printf "Articles about %s on %s." .Title .Site.Title) -}}
+{{- else if .IsPage -}}
+  {{- /* Prefer the existing article excerpt to a short decorative subtitle. */ -}}
+  {{- $summary := .Summary | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- $description = $description | default $summary -}}
+{{- end -}}
+{{- $description = $description | default .Params.subtitle | default .Site.Params.description -}}
+
+{{- $url := .Permalink -}}
+{{- if .IsNode -}}
+  {{- /* Match the theme's canonical and visible listing collections. */ -}}
+  {{- $paginator := .Paginate (partial "func/list-pages.html" .) -}}
+  {{- $url = $paginator.URL | absLangURL -}}
+  {{- if gt $paginator.PageNumber 1 -}}
+    {{- $title = printf "%s - Page %d" $title $paginator.PageNumber -}}
+    {{- $description = printf "Page %d. %s" $paginator.PageNumber $description -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Params.canonicalURL -}}
+  {{- $url = . | absLangURL -}}
+{{- end -}}
+
+{{- $image := .Params.share_img | default .Params.image -}}
+{{- $imageAlt := .Params.imageAlt | default "" -}}
+{{- if not $image -}}
+  {{- with .Params.images -}}
+    {{- $image = index . 0 -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $image -}}
+  {{- with .Site.Params.images -}}
+    {{- $image = index . 0 -}}
+    {{- $imageAlt = "" -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $image -}}
+  {{- $image = .Site.Params.logo -}}
+  {{- $imageAlt = .Site.Title -}}
+{{- end -}}
+{{- with $image -}}
+  {{- $image = strings.TrimPrefix "/" . | absURL -}}
+{{- end -}}
+
+{{- return (dict
+  "title" ($title | plainify | htmlUnescape)
+  "description" ($description | plainify | htmlUnescape | replaceRE "\\s+" " " | strings.TrimSpace | truncate 159 "…" | htmlUnescape)
+  "url" $url
+  "image" ($image | default "")
+  "imageAlt" $imageAlt
+) -}}

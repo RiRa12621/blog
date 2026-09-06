@@ -1,0 +1,15 @@
+{{- $metadata := partial "seo/metadata.html" . -}}
+<meta name="twitter:card" content="{{ if $metadata.image }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $metadata.title }}">
+<meta name="twitter:description" content="{{ $metadata.description }}">
+<meta name="twitter:url" content="{{ $metadata.url }}">
+{{- with $metadata.image }}
+<meta name="twitter:image" content="{{ . }}">
+{{- with $metadata.imageAlt }}
+<meta name="twitter:image:alt" content="{{ . }}">
+{{- end }}
+{{- end }}
+{{- with .Site.Params.author.twitter }}
+<meta name="twitter:site" content="@{{ strings.TrimPrefix "@" . }}">
+<meta name="twitter:creator" content="@{{ strings.TrimPrefix "@" . }}">
+{{- end }}

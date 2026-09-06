@@ -1,0 +1,32 @@
+{{- $metadata := partial "seo/metadata.html" . -}}
+<meta property="og:title" content="{{ $metadata.title }}">
+<meta property="og:description" content="{{ $metadata.description }}">
+<meta property="og:url" content="{{ $metadata.url }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{- $locale := .Site.Language.Lang -}}
+{{- if ge hugo.Version "0.158.0" -}}
+  {{- $locale = .Site.Language.Locale | default $locale -}}
+{{- else -}}
+  {{- $locale = .Site.Language.LanguageCode | default $locale -}}
+{{- end -}}
+{{- with $locale }}
+<meta property="og:locale" content="{{ replace . "-" "_" }}">
+{{- end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{- with $metadata.image }}
+<meta property="og:image" content="{{ . }}">
+{{- with $metadata.imageAlt }}
+<meta property="og:image:alt" content="{{ . }}">
+{{- end }}
+{{- end }}
+{{- if .IsPage }}
+{{- if not .PublishDate.IsZero }}
+<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}">
+{{- end }}
+{{- if not .Lastmod.IsZero }}
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}

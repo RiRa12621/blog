@@ -7,10 +7,12 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 googleAnalytics = "G-4Q6YZVG9E7"
+enableRobotsTXT = true
 
 [Params]
   homeTitle = "The Yelling Cloud" # Set a different text for the header on the home page
   subtitle = "made by Rick Rackow"
+  description = "Rick Rackow's blog about Kubernetes, containers, cloud infrastructure, and software development."
   mainSections = ["post","posts"]
   logo = "imgs/yelling_cloud_logo.png" # Expecting square dimensions
   favicon = "imgs/yelling_cloud_logo.ico"
