@@ -4,7 +4,7 @@ author: "Rick Rackow"
 date: 2026-09-08T20:00:50+02:00
 subtitle: "How I butchered a demo by not sticking to the script"
 image: ""
-tags: ["docker", "container", "kubernetes", "minikube"]
+tags: ["go","docker", "container", "kubernetes"]
 ---
 
 This one is mostly a follow-up to my recent Containerdays talk about Go's
