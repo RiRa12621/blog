@@ -2,7 +2,7 @@
 title: "Go's Concurrency and parallelism (in Containers)"
 author: "Rick Rackow"
 date: 2026-09-08T20:00:50+02:00
-subtitle: "How I butchered a demo by using Minikube instead of real Kubernetes"
+subtitle: "How I butchered a demo by not sticking to the script"
 image: ""
 tags: ["docker", "container", "kubernetes", "minikube"]
 ---
